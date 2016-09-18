@@ -10,7 +10,6 @@ var fs = require("fs");
  */
 module.exports = (()=>{
 
-
 	/**
 	 * Max number of jobs per docker
 	 * @type {Number}
@@ -22,7 +21,6 @@ module.exports = (()=>{
 	 * @type {Number}
 	 */
 	const NUM_DOCKER = 3;
-
 
 	/**
 	 * [RESULT_FAIL description]
@@ -74,7 +72,6 @@ module.exports = (()=>{
 	 */
 	var _docker = Array(NUM_DOCKER).fill(0);
 
-
 	/**
 	 * Dispatch
 	 * 
@@ -125,7 +122,6 @@ module.exports = (()=>{
 		dispatch('downTask', _docker);
 	}
 
-
 	/**
 	 * 
 	 * @return {Boolean}
@@ -134,7 +130,6 @@ module.exports = (()=>{
 		var min = dockerMinTasks();
 		return (_docker[min] >= MAX_TASKS);
 	}
-
 
 	/**
 	 * @param  {[type]}
@@ -160,7 +155,6 @@ module.exports = (()=>{
 			case 'php': return 'php ' + sourceFile + '<' + inputFile;
 		}
 	}
-
 
 	/**
 	 * @param  {[type]}
