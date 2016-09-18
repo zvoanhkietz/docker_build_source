@@ -5,16 +5,16 @@ var docker = require('./docker');
 
 /* GET home page. */
 router.post('/', (req, res, next) => {
-	var data = {
-		"lang": req.body.language,
-		"source": req.body.source,
-		"cases":  [
-		   {"input": 100, "output": 200},
-		   {"input": 200, "output": 300}
-		]
-	};
-	docker.build(data);
-	res.json({'status': 'OK'});
+    var data = {
+        "lang": req.body.language,
+        "source": req.body.source,
+        "cases":  [
+           {"input": 100, "output": 200},
+           {"input": 200, "output": 300}
+        ]
+    };
+    docker.build(data);
+    res.json({'status': 'OK'});
 });
 
 /**
